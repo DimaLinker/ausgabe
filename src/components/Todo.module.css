@@ -1,4 +1,4 @@
-.todo {
+.todo{
     display: flex;
     align-items: center;
     padding: 10px 20px;
@@ -16,4 +16,9 @@
 .todoText {
     width: 100%;
     text-align: left;
+}
+
+.todotasks {
+    margin-right: 10px;
+    color: #5bce0f;
 }
