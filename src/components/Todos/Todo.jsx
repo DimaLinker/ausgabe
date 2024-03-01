@@ -9,8 +9,10 @@ export const Todo = ({todo, deleteTodo, toggleTodo}) => {
         <div className={`${styles.todo} ${todo.completed ? styles.completedTodo : ''}`}>
             <FaTasks className={styles.todoIcon} />
             <div className={styles.todoText}>{todo.text}</div>
-            <RiDeleteBin5Line className={styles.deleteIcon} onClick={() => deleteTodo(todo.id)} />
-            <CgGoogleTasks className={styles.checkIcon} onClick={() => toggleTodo(todo.id)} />
+            <RiDeleteBin5Line className={styles.deleteIcon}
+                              onClick={() => deleteTodo(todo.id)} />
+            <CgGoogleTasks className={styles.checkIcon}
+                           onClick={() => toggleTodo(todo.id)} />
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import './App.css';
-import {TodoForm} from "./components/TodoForm";
+import {TodoForm} from "./components/Todos/TodoForm";
 import {useState} from "react";
-import {TodoList} from "./components/TodoList";
+import {TodoList} from "./components/Todos/TodoList";
 import {v4 as V4} from "uuid";
 
 function App() {
