@@ -10,15 +10,15 @@ function App() {
 
     const addTodoHandler = (text) => {
         const newTodo = {
+            text: text,
+            completed: false,
             id: V4(),
-            text,
-            completed: false
         }
         setTodos([...todos, newTodo])
     }
 
-    const deleteTodoHandler = (index) => {
-        setTodos(todos.filter((_, i) => i !== index))
+    const deleteTodoHandler = (id) => {
+        setTodos(todos.filter( todo => todo.id !== id))
     }
 
 

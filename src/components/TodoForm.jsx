@@ -3,7 +3,7 @@ import styles from './TodoForm.module.css'
 
 console.log(styles)
 
-export const TodoForm = ({addTodo}) => {
+export const TodoForm = ({ addTodo }) => {
     const [text, setText] = useState('');
 
     const onSubmithandler = (event) => {
@@ -18,7 +18,7 @@ export const TodoForm = ({addTodo}) => {
                 <input type="text"
                        placeholder="Text eingeben...."
                        value={text} onChange={(e) => setText(e.target.value)}/>
-                <button onSubmit="submit" >Submit</button>
+                <button>Submit</button>
             </form>
         </div>
     )
