@@ -18,7 +18,29 @@
     text-align: left;
 }
 
-.todotasks {
+.todoIcon {
     margin-right: 10px;
     color: #5bce0f;
+}
+
+.deleteIcon {
+    cursor: pointer;
+    color: #451a1a;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.deleteIcon:hover {
+    color: red;
+}
+
+.chackIcon {
+    cursor: pointer;
+    color: #015323;
+    margin-right: 20px;
+    font-weight: bold;;
+}
+
+.chackIcon:hover {
+    color: green;
 }

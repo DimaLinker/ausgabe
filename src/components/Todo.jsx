@@ -7,10 +7,10 @@ import {RiDeleteBin5Line} from "react-icons/ri";
 export const Todo = ({todo, deleteTodo, index}) => {
     return (
         <div className={styles.todo}>
-            <FaTasks className={styles.todotasks} />
+            <FaTasks className={styles.todoIcon} />
             <div className={styles.todoText}>{todo}</div>
-            <RiDeleteBin5Line onClick={() => deleteTodo(index)} />
-            <CgGoogleTasks />
+            <RiDeleteBin5Line className={styles.deleteIcon} onClick={() => deleteTodo(index)} />
+            <CgGoogleTasks className={styles.chackIcon} />
         </div>
     )
 }
