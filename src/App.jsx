@@ -38,7 +38,6 @@ function App() {
     }
 
     const completedTodosCount = todos.filter((todo) => todo.completed).length;
-    console.log(completedTodosCount)
 
   return (
     <div className="App">
@@ -51,6 +50,8 @@ function App() {
         <TodoList todos={todos}
                   deleteTodo={deleteTodoHandler}
                   toggleTodo={toggleTodoHandler}/>
+
+        {completedTodosCount > 0 && <h2>{`Du hast ${completedTodosCount} ${completedTodosCount > 1 ? 'Aufgaben' : 'Aufgabe'}  von ${todos.length} erledigt `}</h2>}
     </div>
   );
 }
