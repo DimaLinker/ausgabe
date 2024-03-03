@@ -1,10 +1,12 @@
 import React, {useState} from 'react'
 import styles from './TodoForm.module.css'
+import Button from "../UI/Button";
 
 console.log(styles)
 
 export const TodoForm = ({ addTodo }) => {
     const [text, setText] = useState('');
+
 
     const onSubmithandler = (event) => {
         event.preventDefault()
@@ -18,7 +20,7 @@ export const TodoForm = ({ addTodo }) => {
                 <input type="text"
                        placeholder="Text eingeben...."
                        value={text} onChange={(e) => setText(e.target.value)}/>
-                <button>Submit</button>
+                <Button title="Add Todo" type="submit">Submit</Button>
             </form>
         </div>
     )
