@@ -3,6 +3,7 @@ import {TodoForm} from "./components/Todos/TodoForm";
 import {useState} from "react";
 import {TodoList} from "./components/Todos/TodoList";
 import {v4 as V4} from "uuid";
+import {TodosActions} from "./components/Todos/TodosActions";
 
 function App() {
 
@@ -29,11 +30,20 @@ function App() {
         }))
     }
 
+    const resetTodosHandler = () => {
+        setTodos([])
+    }
+    const deletedCompletedTodosHandler = () => {
+        setTodos(todos.filter((todo) => !todo.completed))
+    }
+
   return (
     <div className="App">
         <h1>Gib deine Aufgaben ein</h1>
         <TodoForm
             addTodo={addTodoHandler} />
+        <TodosActions resetTodos={resetTodosHandler}
+                      deletedCompletedTodos={deletedCompletedTodosHandler}/>
         <TodoList todos={todos}
                   deleteTodo={deleteTodoHandler}
                   toggleTodo={toggleTodoHandler}/>

@@ -1,7 +1,17 @@
 import React from 'react'
+import styles from './Button.module.css'
 
-export const Button = () => {
+
+function Button  ({onClick, children, title, disabled} = false) {
     return (
-        <div>Button</div>
+        <button className={styles.button}
+            onClick={onClick}
+            disabled={disabled}
+            title={title}
+        >
+            {children}
+        </button>
     )
 }
+
+export default Button
